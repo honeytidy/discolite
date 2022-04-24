@@ -23,13 +23,13 @@ def show(args):
 
 main_gui = CreateQGUI(title="DiscoDiffusion精简版")
 main_gui.add_banner_tool(GitHub("https://github.com/honeytidy/discolite"))
-main_gui.add_notebook_tool(InputBox(name="prompt_text", default='a beautiful chinese landscape paintings', width=100))
-main_gui.add_notebook_tool(InputBox(name="count", default='5', label_info='生成数量', width=3))
-main_gui.add_notebook_tool(RadioObviousToolButton(["cpu", "gpu"], name="run_mode", title="运行模式"))
+main_gui.add_notebook_tool(InputBox(name="prompt_text", default='a beautiful chinese landscape paintings', width=150))
 main_gui.add_notebook_tool(ChooseDirTextButton(name="save_dir", label_info="保存位置", entry_info="output"))
+count_btn = InputBox(name="count", default='5', label_info='生成数量', width=3)
+mode_btn = RadioObviousToolButton(["cpu", "gpu"], name="run_mode", title="运行模式")
+combs = HorizontalToolsCombine([count_btn, mode_btn])
+main_gui.add_notebook_tool(combs)
 buttons = HorizontalToolsCombine([RunButton(infer), BaseButton(bind_func=show, text="打开生成目录")])
 main_gui.add_notebook_tool(buttons)
-
 main_gui.set_navigation_info("项目介绍", "DiscoDiffusion生成艺术图片的精简版")
-
 main_gui.run()
