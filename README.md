@@ -4,6 +4,8 @@
 - 同时支持图形界面（GUI）方式启动，目前界面还很简单，后续会慢慢优化。
 - 有一个windows版打包程序，解压后双击app.exe即可启动（Pyinstaller打包的程序会被杀毒软件误认为是木马，可添加信任，如果不放心可以支持下载源码自己运行）。
 
+![screenshot](asset/screenshot.png)
+
 ## 快速开始
 ```bash
 # 安装依赖
