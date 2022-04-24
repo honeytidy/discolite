@@ -24,7 +24,7 @@ python gui.py
 ```bash
 pyinstaller app.spec --noconfirm --clean
 ```
-打包完成后运行`dist/app.exe`即可启动。
+打包完成后运行`dist/discolite/app.exe`即可启动。
 
 ## 感谢如下项目
 - [DiscoDiffusion](https://github.com/alembics/disco-diffusion)
