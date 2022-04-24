@@ -18,7 +18,7 @@ python discodiff.py
 python gui.py
 ```
 ### 运行安装包
-下载[安装包]()，解压后双击app.exe即可启动。
+下载[安装包](https://aitool.center/download/discolite.zip)，解压后双击app.exe即可启动。
 
 ### 自己打包
 ```bash
