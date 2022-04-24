@@ -383,13 +383,11 @@ def do_run(prompt_texts='a beautiful chinese landscape paintings',
             init_image=None,
             randomize_class=True,
             eta=0.8)
-        import gc; gc.collect()
         for j, sample in enumerate(samples):
             cur_t -= 1
             for k, image in enumerate(sample['pred_xstart']):
                 image = TF.to_pil_image(image.add(1).div(2).clamp(0, 1))
-                if j % 5 == 0:
-                    image.save(f'{output_dir}/output{i}.png')
+                image.save(f'{output_dir}/output{i}.png')
 
 
 if __name__ == '__main__':
