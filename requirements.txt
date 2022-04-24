@@ -1,0 +1,11 @@
+numpy
+pyinstaller
+QGUI
+tqdm
+ttkbootstrap
+ftfy
+tqdm
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch
+--extra-index-url https://download.pytorch.org/whl/cu113
+torchvision
